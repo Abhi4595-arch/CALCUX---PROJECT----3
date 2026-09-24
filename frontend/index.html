@@ -1,13 +1,1763 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>frontend</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CALCUX — C++ Calculator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="brand">
+            <div class="brand-logo">C</div>
+
+            <div>
+                <h2>CALCUX</h2>
+                <span>C++ CALCULATOR</span>
+            </div>
+        </div>
+
+        <div class="nav-title">
+            WORKSPACE
+        </div>
+
+        <nav class="navigation">
+
+            <button class="nav-item active" data-page="dashboard">
+                <span>⌂</span>
+                Dashboard
+            </button>
+
+            <button class="nav-item" data-page="calculator">
+                <span>＋</span>
+                Calculator
+            </button>
+
+            <button class="nav-item" data-page="advanced">
+                <span>✦</span>
+                Advanced
+            </button>
+
+            <button class="nav-item" data-page="expression">
+                <span>ƒx</span>
+                Expression
+            </button>
+
+            <button class="nav-item" data-page="history">
+                <span>◷</span>
+                History
+            </button>
+
+            <button class="nav-item" data-page="statistics">
+                <span>▥</span>
+                Statistics
+            </button>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <div class="engine-box">
+                <div class="engine-dot"></div>
+
+                <div>
+                    <strong>C++ ENGINE</strong>
+                    <small>Native calculation core</small>
+                </div>
+            </div>
+
+            <span class="version">
+                CALCUX v1.0
+            </span>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+    <main class="main">
+
+        <!-- TOP BAR -->
+        <header class="topbar">
+
+            <div>
+                <span class="breadcrumb">
+                    WORKSPACE / OVERVIEW
+                </span>
+
+                <h1>
+                    Dashboard
+                </h1>
+            </div>
+
+            <div class="cpp-badge">
+                <span class="dot"></span>
+                C++ POWERED
+            </div>
+
+        </header>
+
+
+        <!-- DASHBOARD -->
+        <section class="page active" id="dashboard">
+
+            <!-- INTRO -->
+            <div class="intro">
+
+                <span class="eyebrow">
+                    NATIVE CALCULATION WORKSPACE
+                </span>
+
+                <h2>
+                    Simple calculations.<br>
+                    <span>Powerful C++ engine.</span>
+                </h2>
+
+                <p>
+                    CALCUX provides a clean interface for the native
+                    C++ calculation engine.
+                </p>
+
+            </div>
+
+
+            <!-- HERO -->
+            <section class="hero">
+
+                <div class="hero-content">
+
+                    <span class="hero-label">
+                        C++ CALCULATION ENGINE
+                    </span>
+
+                    <h3>
+                        One calculator.<br>
+                        <span>Multiple capabilities.</span>
+                    </h3>
+
+                    <p>
+                        Perform arithmetic, advanced calculations,
+                        mathematical expressions and manage calculation history.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <button
+                            class="btn primary"
+                            data-page-target="calculator"
+                        >
+                            Open Calculator
+                            <span>→</span>
+                        </button>
+
+                        <button
+                            class="btn secondary"
+                            data-page-target="advanced"
+                        >
+                            Advanced Operations
+                            <span>→</span>
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="cpp-visual">
+
+                    <div class="orbit orbit-1"></div>
+                    <div class="orbit orbit-2"></div>
+
+                    <div class="cpp-core">
+                        C++
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- CAPABILITIES -->
+            <div class="section-title">
+
+                <div>
+                    <span class="eyebrow">
+                        BACKEND CAPABILITIES
+                    </span>
+
+                    <h3>
+                        What CALCUX can do
+                    </h3>
+                </div>
+
+            </div>
+
+
+            <div class="capability-grid">
+
+                <button
+                    class="capability-card"
+                    data-page-target="calculator"
+                >
+
+                    <div class="card-icon">
+                        ＋
+                    </div>
+
+                    <span class="card-count">
+                        5 OPERATIONS
+                    </span>
+
+                    <h4>
+                        Basic Calculator
+                    </h4>
+
+                    <p>
+                        Addition, subtraction, multiplication,
+                        division and modulus.
+                    </p>
+
+                    <span class="card-link">
+                        Open Calculator →
+                    </span>
+
+                </button>
+
+
+                <button
+                    class="capability-card"
+                    data-page-target="advanced"
+                >
+
+                    <div class="card-icon">
+                        ✦
+                    </div>
+
+                    <span class="card-count">
+                        8 OPERATIONS
+                    </span>
+
+                    <h4>
+                        Advanced Operations
+                    </h4>
+
+                    <p>
+                        Power, square root, percentage, factorial,
+                        prime, even/odd, GCD and LCM.
+                    </p>
+
+                    <span class="card-link">
+                        Open Advanced →
+                    </span>
+
+                </button>
+
+
+                <button
+                    class="capability-card"
+                    data-page-target="expression"
+                >
+
+                    <div class="card-icon">
+                        ƒx
+                    </div>
+
+                    <span class="card-count">
+                        EXPRESSION PARSER
+                    </span>
+
+                    <h4>
+                        Expression Calculator
+                    </h4>
+
+                    <p>
+                        Evaluate complete mathematical expressions
+                        using the C++ parser.
+                    </p>
+
+                    <span class="card-link">
+                        Open Expression →
+                    </span>
+
+                </button>
+
+
+                <button
+                    class="capability-card"
+                    data-page-target="history"
+                >
+
+                    <div class="card-icon">
+                        ◷
+                    </div>
+
+                    <span class="card-count">
+                        PERSISTENT DATA
+                    </span>
+
+                    <h4>
+                        Calculation History
+                    </h4>
+
+                    <p>
+                        View, search and clear calculations
+                        stored by the C++ engine.
+                    </p>
+
+                    <span class="card-link">
+                        Open History →
+                    </span>
+
+                </button>
+
+            </div>
+
+
+            <!-- ARCHITECTURE -->
+            <section class="architecture">
+
+                <div>
+                    <span class="eyebrow">
+                        SYSTEM ARCHITECTURE
+                    </span>
+
+                    <h3>
+                        Frontend stays lightweight.
+                    </h3>
+
+                    <p>
+                        The interface communicates with the REST API,
+                        while the actual calculations remain inside
+                        the C++ engine.
+                    </p>
+                </div>
+
+
+                <div class="flow">
+
+                    <div class="flow-item">
+                        <strong>Frontend</strong>
+                        <small>HTML / CSS / JS</small>
+                    </div>
+
+                    <span>→</span>
+
+                    <div class="flow-item">
+                        <strong>REST API</strong>
+                        <small>HTTP layer</small>
+                    </div>
+
+                    <span>→</span>
+
+                    <div class="flow-item active">
+                        <strong>C++</strong>
+                        <small>Calculation engine</small>
+                    </div>
+
+                    <span>→</span>
+
+                    <div class="flow-item">
+                        <strong>History</strong>
+                        <small>history.txt</small>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </section>
+
+
+        <!-- -------------------Basic Calculator-------------------------------------------->
+        <section class="page" id="calculator">
+
+    <div class="page-heading-block">
+        <span class="eyebrow">CALCUX / CALCULATOR</span>
+
+        <h2>Basic Calculator</h2>
+
+        <p>
+            Perform standard arithmetic calculations using the C++ engine.
+        </p>
+    </div>
+
+
+    <div class="calculator-layout">
+
+        <!-- CALCULATOR INPUT -->
+        <section class="calculator-card">
+
+            <div class="card-header-row">
+
+                <div>
+                    <span class="eyebrow">CALCULATION</span>
+
+                    <h3>Enter Values</h3>
+                </div>
+
+                <span class="cpp-label">
+                    C++ ENGINE
+                </span>
+
+            </div>
+
+
+            <!-- FIRST NUMBER -->
+            <label class="input-label" for="first-number">
+                First Number
+            </label>
+
+            <input
+                class="input-field"
+                id="first-number"
+                type="number"
+                step="any"
+                placeholder="Enter first number"
+                autocomplete="off"
+            >
+
+
+            <!-- SECOND NUMBER -->
+            <label class="input-label" for="second-number">
+                Second Number
+            </label>
+
+            <input
+                class="input-field"
+                id="second-number"
+                type="number"
+                step="any"
+                placeholder="Enter second number"
+                autocomplete="off"
+            >
+
+
+            <!-- SELECTED OPERATION -->
+            <div class="selected-operation">
+
+                <span class="calculator-operation-label">
+                    SELECTED OPERATION
+                </span>
+
+                <div class="selected-operation-value">
+
+                    <div class="selected-symbol" id="selected-symbol">
+                        +
+                    </div>
+
+                    <div>
+                        <strong id="selected-operation-name">
+                            Addition
+                        </strong>
+
+                        <small id="selected-operation-help">
+                            Add two numbers
+                        </small>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CALCULATE -->
+            <button
+                class="primary-button calculator-submit"
+                id="calculate-basic-btn"
+            >
+                Calculate
+                <span>→</span>
+            </button>
+
+
+            <!-- RESULT -->
+            <div class="result-card">
+
+                <span class="result-label">
+                    RESULT
+                </span>
+
+                <strong id="basic-calculator-result">
+                    —
+                </strong>
+
+                <span id="basic-calculator-expression">
+                    Enter two numbers and select an operation.
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- OPERATIONS -->
+        <aside class="operation-panel">
+
+            <div class="card-header-row">
+
+                <div>
+                    <span class="eyebrow">
+                        OPERATIONS
+                    </span>
+
+                    <h3>Select Operation</h3>
+                </div>
+
+                <div class="panel-icon">
+                    ＋
+                </div>
+
+            </div>
+
+
+            <p>
+                Choose one of the five arithmetic operations
+                supported by the C++ calculation engine.
+            </p>
+
+
+            <div class="available-list">
+
+                <!-- ADD -->
+                <button
+                    class="available-row basic-operation active"
+                    data-operation="add"
+                    data-symbol="+"
+                    data-name="Addition"
+                    data-help="Add two numbers"
+                >
+
+                    <div class="operation-symbol">
+                        +
+                    </div>
+
+                    <div>
+                        <b>Addition</b>
+                        <small>Add two numbers</small>
+                    </div>
+
+                    <em>→</em>
+
+                </button>
+
+
+                <!-- SUBTRACT -->
+                <button
+                    class="available-row basic-operation"
+                    data-operation="subtract"
+                    data-symbol="−"
+                    data-name="Subtraction"
+                    data-help="Subtract the second number from the first"
+                >
+
+                    <div class="operation-symbol">
+                        −
+                    </div>
+
+                    <div>
+                        <b>Subtraction</b>
+                        <small>Subtract two numbers</small>
+                    </div>
+
+                    <em>→</em>
+
+                </button>
+
+
+                <!-- MULTIPLY -->
+                <button
+                    class="available-row basic-operation"
+                    data-operation="multiply"
+                    data-symbol="×"
+                    data-name="Multiplication"
+                    data-help="Multiply two numbers"
+                >
+
+                    <div class="operation-symbol">
+                        ×
+                    </div>
+
+                    <div>
+                        <b>Multiplication</b>
+                        <small>Multiply two numbers</small>
+                    </div>
+
+                    <em>→</em>
+
+                </button>
+
+
+                <!-- DIVIDE -->
+                <button
+                    class="available-row basic-operation"
+                    data-operation="divide"
+                    data-symbol="÷"
+                    data-name="Division"
+                    data-help="Divide the first number by the second"
+                >
+
+                    <div class="operation-symbol">
+                        ÷
+                    </div>
+
+                    <div>
+                        <b>Division</b>
+                        <small>Divide two numbers</small>
+                    </div>
+
+                    <em>→</em>
+
+                </button>
+
+
+                <!-- MODULUS -->
+                <button
+                    class="available-row basic-operation"
+                    data-operation="modulus"
+                    data-symbol="%"
+                    data-name="Modulus"
+                    data-help="Find the remainder of two integers"
+                >
+
+                    <div class="operation-symbol">
+                        %
+                    </div>
+
+                    <div>
+                        <b>Modulus</b>
+                        <small>Find the remainder</small>
+                    </div>
+
+                    <em>→</em>
+
+                </button>
+
+            </div>
+
+
+            <!-- BACKEND NOTE -->
+            <div class="selected-operation-card">
+
+                <span class="selected-label">
+                    C++ BACKEND
+                </span>
+
+                <div class="selected-content">
+
+                    <strong id="backend-operation-symbol">
+                        +
+                    </strong>
+
+                    <div>
+
+                        <b id="backend-operation-name">
+                            add
+                        </b>
+
+                        <small>
+                            Operation will be sent to the C++ API.
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </aside>
+
+    </div>
+
+</section>
+        <!-- -------------------Advanced Operations-------------------------------------------->
+
+        <section class="page" id="advanced">
+
+    <div class="page-heading-block">
+
+        <span class="eyebrow">
+            CALCUX / ADVANCED
+        </span>
+
+        <h2>
+            Advanced Operations
+        </h2>
+
+        <p>
+            Perform advanced mathematical operations using the C++ engine.
+        </p>
+
+    </div>
+
+
+    <div class="advanced-layout">
+
+        <!-- LEFT: CALCULATION -->
+        <section class="calculator-card advanced-calculation-card">
+
+            <div class="card-header-row">
+
+                <div>
+                    <span class="eyebrow">
+                        CALCULATION
+                    </span>
+
+                    <h3 id="advanced-title">
+                        Power
+                    </h3>
+                </div>
+
+                <span
+                    class="cpp-label"
+                    id="advanced-symbol"
+                >
+                    ^
+                </span>
+
+            </div>
+
+
+            <p
+                class="advanced-help"
+                id="advanced-help"
+            >
+                Raise a base to an exponent.
+            </p>
+
+
+            <!-- DYNAMIC INPUTS -->
+            <div
+                class="advanced-fields"
+                id="advanced-fields"
+            >
+
+                <div class="advanced-field">
+
+                    <label for="advanced-input-1">
+                        Base
+                    </label>
+
+                    <input
+                        class="input-field"
+                        id="advanced-input-1"
+                        type="number"
+                        step="any"
+                        placeholder="Enter base"
+                        autocomplete="off"
+                    >
+
+                </div>
+
+
+                <div class="advanced-field">
+
+                    <label for="advanced-input-2">
+                        Exponent
+                    </label>
+
+                    <input
+                        class="input-field"
+                        id="advanced-input-2"
+                        type="number"
+                        step="any"
+                        placeholder="Enter exponent"
+                        autocomplete="off"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="primary-button calculator-submit"
+                id="advanced-calculate-btn"
+            >
+                Calculate
+                <span>→</span>
+            </button>
+
+
+            <div class="result-card">
+
+                <span class="result-label">
+                    RESULT
+                </span>
+
+                <strong id="advanced-result">
+                    —
+                </strong>
+
+                <span id="advanced-message">
+                    Select an operation and enter the required values.
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- RIGHT: OPERATIONS -->
+        <aside class="operation-panel">
+
+            <div class="card-header-row">
+
+                <div>
+                    <span class="eyebrow">
+                        OPERATIONS
+                    </span>
+
+                    <h3>
+                        Advanced Tools
+                    </h3>
+                </div>
+
+                <div class="panel-icon">
+                    ✦
+                </div>
+
+            </div>
+
+
+            <p>
+                Select an operation supported directly by
+                the C++ calculation engine.
+            </p>
+
+
+            <div
+                class="advanced-operation-grid"
+                id="advanced-operation-grid"
+            >
+
+                <!-- POWER -->
+                <button
+                    class="advanced-option active"
+                    data-operation="power"
+                    data-symbol="^"
+                    data-title="Power"
+                    data-help="Raise a base to an exponent."
+                >
+                    <span class="advanced-option-icon">
+                        ^
+                    </span>
+
+                    <span class="advanced-option-content">
+                        <b>Power</b>
+                        <small>Base and exponent</small>
+                    </span>
+                </button>
+
+
+                <!-- SQUARE ROOT -->
+                <button
+                    class="advanced-option"
+                    data-operation="squareRoot"
+                    data-symbol="√"
+                    data-title="Square Root"
+                    data-help="Find the square root of a number."
+                >
+                    <span class="advanced-option-icon">
+                        √
+                    </span>
+
+                    <span class="advanced-option-content">
+                        <b>Square Root</b>
+                        <small>Square root of a number</small>
+                    </span>
+                </button>
+
+
+                <!-- PERCENTAGE -->
+                <button
+                    class="advanced-option"
+                    data-operation="percentage"
+                    data-symbol="%"
+                    data-title="Percentage"
+                    data-help="Calculate a percentage of a value."
+                >
+                    <span class="advanced-option-icon">
+                        %
+                    </span>
+
+                    <span class="advanced-option-content">
+                        <b>Percentage</b>
+                        <small>Value and percent</small>
+                    </span>
+                </button>
+
+
+                <!-- FACTORIAL -->
+                <button
+                    class="advanced-option"
+                    data-operation="factorial"
+                    data-symbol="!"
+                    data-title="Factorial"
+                    data-help="Calculate the factorial of an integer."
+                >
+                    <span class="advanced-option-icon">
+                        !
+                    </span>
+
+                    <span class="advanced-option-content">
+                        <b>Factorial</b>
+                        <small>Factorial of an integer</small>
+                    </span>
+                </button>
+
+
+                <!-- PRIME -->
+                <button
+                    class="advanced-option"
+                    data-operation="primeCheck"
+                    data-symbol="P"
+                    data-title="Prime Check"
+                    data-help="Check whether an integer is prime."
+                >
+                    <span class="advanced-option-icon">
+                        P
+                    </span>
+
+                    <span class="advanced-option-content">
+                        <b>Prime Check</b>
+                        <small>Check an integer</small>
+                    </span>
+                </button>
+
+
+                <!-- EVEN / ODD -->
+                <button
+                    class="advanced-option"
+                    data-operation="evenOddCheck"
+                    data-symbol="E/O"
+                    data-title="Even / Odd"
+                    data-help="Check whether an integer is even or odd."
+                >
+                    <span class="advanced-option-icon">
+                        E/O
+                    </span>
+
+                    <span class="advanced-option-content">
+                        <b>Even / Odd</b>
+                        <small>Check an integer</small>
+                    </span>
+                </button>
+
+
+                <!-- GCD -->
+                <button
+                    class="advanced-option"
+                    data-operation="gcd"
+                    data-symbol="GCD"
+                    data-title="GCD"
+                    data-help="Find the greatest common divisor of two integers."
+                >
+                    <span class="advanced-option-icon">
+                        GCD
+                    </span>
+
+                    <span class="advanced-option-content">
+                        <b>GCD</b>
+                        <small>Two integers</small>
+                    </span>
+                </button>
+
+
+                <!-- LCM -->
+                <button
+                    class="advanced-option"
+                    data-operation="lcm"
+                    data-symbol="LCM"
+                    data-title="LCM"
+                    data-help="Find the least common multiple of two integers."
+                >
+                    <span class="advanced-option-icon">
+                        LCM
+                    </span>
+
+                    <span class="advanced-option-content">
+                        <b>LCM</b>
+                        <small>Two integers</small>
+                    </span>
+                </button>
+
+            </div>
+
+
+            <!-- BACKEND INFO -->
+            <div class="selected-operation-card">
+
+                <span class="selected-label">
+                    C++ BACKEND OPERATION
+                </span>
+
+                <div class="selected-content">
+
+                    <strong id="advanced-backend-symbol">
+                        ^
+                    </strong>
+
+                    <div>
+
+                        <b id="advanced-backend-name">
+                            power
+                        </b>
+
+                        <small>
+                            Operation will be handled by C++.
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </aside>
+
+    </div>
+
+</section>
+        <!-- -------------------Expression Calculator-------------------------------------------->
+
+       <section class="page" id="expression">
+
+    <div class="page-heading-block">
+        <span class="eyebrow">CALCUX / EXPRESSION</span>
+
+        <h2>
+            Expression Calculator
+        </h2>
+
+        <p>
+            Evaluate complete mathematical expressions using the C++ parser.
+        </p>
+    </div>
+
+
+    <div class="expression-layout">
+
+        <!-- EXPRESSION INPUT -->
+        <section class="calculator-card expression-card">
+
+            <div class="card-header-row">
+
+                <div>
+                    <span class="eyebrow">
+                        EXPRESSION ENGINE
+                    </span>
+
+                    <h3>
+                        Enter Expression
+                    </h3>
+                </div>
+
+                <span class="cpp-label">
+                    C++ PARSER
+                </span>
+
+            </div>
+
+
+            <div class="expression-display">
+
+                <div class="expression-input-label">
+                    MATHEMATICAL EXPRESSION
+                </div>
+
+                <input
+                    id="expression-input"
+                    type="text"
+                    placeholder="Example: 2 + 3 * 4"
+                    autocomplete="off"
+                    spellcheck="false"
+                >
+
+                <div class="expression-meta">
+
+                    <span id="expression-char-count">
+                        0 characters
+                    </span>
+
+                    <span>
+                        C++ EXPRESSION ENGINE
+                    </span>
+
+                </div>
+
+            </div>
+
+            <!-- CALCULATOR KEYPAD -->
+
+<div class="expression-keypad">
+
+    <button type="button" class="keypad-key action">C</button>
+    <button type="button" class="keypad-key action">⌫</button>
+    <button type="button" class="keypad-key operator">(</button>
+    <button type="button" class="keypad-key operator">)</button>
+
+    <button type="button" class="keypad-key">7</button>
+    <button type="button" class="keypad-key">8</button>
+    <button type="button" class="keypad-key">9</button>
+    <button type="button" class="keypad-key operator">÷</button>
+
+    <button type="button" class="keypad-key">4</button>
+    <button type="button" class="keypad-key">5</button>
+    <button type="button" class="keypad-key">6</button>
+    <button type="button" class="keypad-key operator">×</button>
+
+    <button type="button" class="keypad-key">1</button>
+    <button type="button" class="keypad-key">2</button>
+    <button type="button" class="keypad-key">3</button>
+    <button type="button" class="keypad-key operator">−</button>
+
+    <button type="button" class="keypad-key zero">0</button>
+    <button type="button" class="keypad-key">.</button>
+    <button type="button" class="keypad-key operator">^</button>
+    <button type="button" class="keypad-key operator">+</button>
+
+</div>
+
+            <!-- RESULT -->
+            <div class="expression-result">
+
+                <span class="result-label">
+                    RESULT
+                </span>
+
+                <strong id="expression-result">
+                    —
+                </strong>
+
+            </div>
+
+
+            <!-- ACTIONS -->
+            <div class="expression-actions">
+
+                <button
+                    class="secondary-button"
+                    id="expression-clear"
+                >
+                    Clear
+                </button>
+
+                <button
+                    class="primary-button"
+                    id="expression-evaluate"
+                >
+                    Evaluate
+                    <span>→</span>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- PARSER INFORMATION -->
+        <aside class="operation-panel expression-info">
+
+            <div class="card-header-row">
+
+                <div>
+                    <span class="eyebrow">
+                        SUPPORTED
+                    </span>
+
+                    <h3>
+                        Parser Rules
+                    </h3>
+                </div>
+
+                <div class="panel-icon">
+                    ƒx
+                </div>
+
+            </div>
+
+
+            <p>
+                These operators are handled by the native C++ expression parser.
+            </p>
+
+
+            <div class="operator-list">
+
+                <div class="operator-item">
+                    <strong>+</strong>
+                    <span>Addition</span>
+                </div>
+
+                <div class="operator-item">
+                    <strong>−</strong>
+                    <span>Subtraction</span>
+                </div>
+
+                <div class="operator-item">
+                    <strong>×</strong>
+                    <span>Multiplication</span>
+                </div>
+
+                <div class="operator-item">
+                    <strong>÷</strong>
+                    <span>Division</span>
+                </div>
+
+                <div class="operator-item">
+                    <strong>^</strong>
+                    <span>Power</span>
+                </div>
+
+                <div class="operator-item">
+                    <strong>( )</strong>
+                    <span>Parentheses</span>
+                </div>
+
+            </div>
+
+
+            <div class="expression-examples">
+
+                <span class="selected-label">
+                    EXAMPLES
+                </span>
+
+                <div>
+                    <code>2 + 3 * 4</code>
+                    <small>→ 14</small>
+                </div>
+
+                <div>
+                    <code>(10 + 5) / 3</code>
+                    <small>→ 5</small>
+                </div>
+
+                <div>
+                    <code>2 ^ 3</code>
+                    <small>→ 8</small>
+                </div>
+
+            </div>
+
+
+            <div class="expression-note">
+
+                <strong>Note</strong>
+
+                <span>
+                    Modulus (%) is available on the Basic Calculator
+                    page and is not supported inside expressions.
+                </span>
+
+            </div>
+
+        </aside>
+
+    </div>
+
+</section>
+        <!-- -------------------History.-------------------------------------------->
+
+        <section class="page" id="history">
+
+    <div class="page-heading-block">
+
+        <span class="eyebrow">
+            CALCUX / HISTORY
+        </span>
+
+        <h2>
+            Calculation History
+        </h2>
+
+        <p>
+            View and search calculations stored by the C++ engine.
+        </p>
+
+    </div>
+
+
+    <!-- SEARCH -->
+    <section class="history-search-card">
+
+        <div class="history-search-header">
+
+            <div>
+                <span class="eyebrow">
+                    SEARCH HISTORY
+                </span>
+
+                <h3>
+                    Find a calculation
+                </h3>
+
+                <p>
+                    Search through the calculations saved by CALCUX.
+                </p>
+            </div>
+
+            <div class="history-search-icon">
+                ⌕
+            </div>
+
+        </div>
+
+
+        <div class="history-search-row">
+
+            <input
+                id="history-search"
+                class="input-field"
+                type="text"
+                placeholder="Search calculation history..."
+                autocomplete="off"
+            >
+
+            <button
+                class="history-search-button"
+                id="history-search-button"
+                type="button"
+            >
+                Search
+                <span>⌕</span>
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- HISTORY -->
+    <section class="history-card">
+
+        <div class="history-header">
+
+            <div>
+
+                <span class="eyebrow">
+                    STORED CALCULATIONS
+                </span>
+
+                <h3>
+                    Recent History
+                </h3>
+
+                <span
+                    class="history-count"
+                    id="history-count"
+                >
+                    0 calculations
+                </span>
+
+            </div>
+
+
+            <div class="history-actions">
+
+                <button
+                    class="history-refresh-button"
+                    id="history-refresh"
+                    type="button"
+                >
+                    ↻
+                    <span>Refresh</span>
+                </button>
+
+                <button
+                    class="history-clear-button"
+                    id="clear-history"
+                    type="button"
+                >
+                    Clear All
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- LIST -->
+        <div
+            class="history-list"
+            id="history-list"
+        >
+
+            <div class="history-empty">
+
+                <div class="history-empty-icon">
+                    ◷
+                </div>
+
+                <h4>
+                    No history loaded
+                </h4>
+
+                <p>
+                    Your C++ calculation history will appear here
+                    after API integration.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</section>
+        <!-- -------------------Statistics-------------------------------------------->
+
+        <section class="page" id="statistics">
+
+    <div class="page-heading-block">
+
+        <span class="eyebrow">
+            CALCUX / STATISTICS
+        </span>
+
+        <h2>
+            History Statistics
+        </h2>
+
+        <p>
+            View operation counts reported directly by the C++ history engine.
+        </p>
+
+    </div>
+
+
+    <!-- SUMMARY -->
+
+    <div class="statistics-summary">
+
+        <div class="statistics-total-card">
+
+            <div class="statistics-icon">
+                ∑
+            </div>
+
+            <div>
+                <span class="statistics-label">
+                    TOTAL CALCULATIONS
+                </span>
+
+                <strong id="stat-total">
+                    —
+                </strong>
+
+                <small>
+                    All stored history entries
+                </small>
+            </div>
+
+        </div>
+
+
+        <div class="statistics-total-card">
+
+            <div class="statistics-icon">
+                •••
+            </div>
+
+            <div>
+                <span class="statistics-label">
+                    OTHER OPERATIONS
+                </span>
+
+                <strong id="stat-other">
+                    —
+                </strong>
+
+                <small>
+                    Other recorded operations
+                </small>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- OPERATION STATISTICS -->
+
+    <div class="section-title statistics-title">
+
+        <div>
+            <span class="eyebrow">
+                OPERATION BREAKDOWN
+            </span>
+
+            <h3>
+                Calculation Statistics
+            </h3>
+        </div>
+
+    </div>
+
+
+    <div class="statistics-grid">
+
+        <!-- ADDITION -->
+
+        <div class="statistics-card">
+
+            <div class="statistics-card-top">
+
+                <div class="statistics-small-icon">
+                    +
+                </div>
+
+                <span>
+                    ADDITION
+                </span>
+
+            </div>
+
+            <strong id="stat-addition">
+                —
+            </strong>
+
+            <small>
+                Addition operations
+            </small>
+
+        </div>
+
+
+        <!-- SUBTRACTION -->
+
+        <div class="statistics-card">
+
+            <div class="statistics-card-top">
+
+                <div class="statistics-small-icon">
+                    −
+                </div>
+
+                <span>
+                    SUBTRACTION
+                </span>
+
+            </div>
+
+            <strong id="stat-subtraction">
+                —
+            </strong>
+
+            <small>
+                Subtraction operations
+            </small>
+
+        </div>
+
+
+        <!-- MULTIPLICATION -->
+
+        <div class="statistics-card">
+
+            <div class="statistics-card-top">
+
+                <div class="statistics-small-icon">
+                    ×
+                </div>
+
+                <span>
+                    MULTIPLICATION
+                </span>
+
+            </div>
+
+            <strong id="stat-multiplication">
+                —
+            </strong>
+
+            <small>
+                Multiplication operations
+            </small>
+
+        </div>
+
+
+        <!-- DIVISION -->
+
+        <div class="statistics-card">
+
+            <div class="statistics-card-top">
+
+                <div class="statistics-small-icon">
+                    ÷
+                </div>
+
+                <span>
+                    DIVISION
+                </span>
+
+            </div>
+
+            <strong id="stat-division">
+                —
+            </strong>
+
+            <small>
+                Division operations
+            </small>
+
+        </div>
+
+
+        <!-- MODULUS -->
+
+        <div class="statistics-card">
+
+            <div class="statistics-card-top">
+
+                <div class="statistics-small-icon">
+                    %
+                </div>
+
+                <span>
+                    MODULUS
+                </span>
+
+            </div>
+
+            <strong id="stat-modulus">
+                —
+            </strong>
+
+            <small>
+                Modulus operations
+            </small>
+
+        </div>
+
+
+        <!-- POWER -->
+
+        <div class="statistics-card">
+
+            <div class="statistics-card-top">
+
+                <div class="statistics-small-icon">
+                    ^
+                </div>
+
+                <span>
+                    POWER
+                </span>
+
+            </div>
+
+            <strong id="stat-power">
+                —
+            </strong>
+
+            <small>
+                Power operations
+            </small>
+
+        </div>
+
+
+        <!-- OTHER -->
+
+        <div class="statistics-card">
+
+            <div class="statistics-card-top">
+
+                <div class="statistics-small-icon">
+                    •••
+                </div>
+
+                <span>
+                    OTHER
+                </span>
+
+            </div>
+
+            <strong id="stat-other-breakdown">
+                —
+            </strong>
+
+            <small>
+                Other recorded operations
+            </small>
+
+        </div>
+
+
+        <!-- TOTAL -->
+
+        <div class="statistics-card statistics-card-highlight">
+
+            <div class="statistics-card-top">
+
+                <div class="statistics-small-icon">
+                    ∑
+                </div>
+
+                <span>
+                    TOTAL
+                </span>
+
+            </div>
+
+            <strong id="stat-total-breakdown">
+                —
+            </strong>
+
+            <small>
+                Total history entries
+            </small>
+
+        </div>
+
+    </div>
+
+
+    <!-- BACKEND INFORMATION -->
+
+    <section class="statistics-info">
+
+        <div class="statistics-info-icon">
+            C++
+        </div>
+
+        <div>
+
+            <span class="eyebrow">
+                C++ HISTORY ENGINE
+            </span>
+
+            <h3>
+                Statistics come from the backend.
+            </h3>
+
+            <p>
+                CALCUX does not calculate these counts in the frontend.
+                The values are reported directly by the C++ history service.
+            </p>
+
+        </div>
+
+    </section>
+
+</section>
+
+    </main>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
 </html>
